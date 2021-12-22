@@ -10,19 +10,23 @@
 </template>
 
 <script>
+import dataShared from '../../share/dataShared';
+
 import Card from '../elements/Card.vue';
 
 export default {
     name: 'FilmsList',
-    props: {
-        films: Array
-    },
     components: {
         Card
     },
+    data() {
+        return {
+            dataShared
+        }
+    },
     computed: {
         filmsOrderByPopularity() {
-            const films = this.films;
+            const films = this.dataShared.films;
 
             return films.sort((a, b) => {
                 return b.popularity - a.popularity;

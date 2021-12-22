@@ -1,7 +1,7 @@
 <template>
   <main>
-    <FilmsList :films="films"/>
-    <SeriesList :series="series"/>
+    <FilmsList/>
+    <SeriesList/>
   </main>
 </template>
 
@@ -14,10 +14,6 @@ export default {
     components: {
       FilmsList,
       SeriesList
-    },
-    props: {
-      films: Array,
-      series: Array
     }
 }
 </script>
