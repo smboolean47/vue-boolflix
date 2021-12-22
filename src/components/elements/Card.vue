@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="'https://image.tmdb.org/t/p/w342'+info.poster_path" :alt="info.title ? info.title : info.name">
+    <img :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`" :alt="info.title ? info.title : info.name">
     <h3>{{info.title ? info.title : info.name}}</h3>
     <h4 v-if="info.original_title">{{info.original_title}}</h4>
     <h4 v-else>{{info.original_name}}</h4>
